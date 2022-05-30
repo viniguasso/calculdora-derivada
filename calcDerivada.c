@@ -43,8 +43,7 @@ void deriva(double poli[ ], int grau, double out[grau]) {
     for (int i = grau; i > 1; i--) {
         printf("%.lfx^%d + ", poli[i], i);
     }
-    printf("%.lfx ", poli[1]);
-    printf("+ %.lf\n", poli[0]);
+    printf("%.lfx + %.lf\n", poli[1], poli[0]);
 
     //calcular dervidado
     int exp=grau;
@@ -58,13 +57,12 @@ void deriva(double poli[ ], int grau, double out[grau]) {
     for (int i = grau; i > 1; i--) {
         printf("(%d.%.lf)x^(%d-1) + ", i, poli[i], i);
     }
-    printf("(1.%.lf)x^(1-1)) ", poli[1]);
-    printf("+ (0.%.lf)\n", poli[0]);
+    printf("(1.%.lf)x^(1-1) + (0.%.lf)\n", poli[1], poli[0]);
 
     //mostrar resultado
     printf("p'(x) = ");
     for (int i = grau-1; i > 1; i--) {
         printf("%.lfx^%d + ", out[i], i);
     }
-    printf("%.lfx + %.lf + 0\n", out[1], out[0]);
+    printf("%.lfx + %.lf + 0\n\n", out[1], out[0]);
 }
