@@ -64,5 +64,5 @@ void deriva(double poli[ ], int grau, double out[grau-1]) {
     for (int i = grau-1; i > 1; i--) {
         printf("%.lfx^%d + ", out[i], i);
     }
-    printf("%.lfx + %.lf + 0\n\n", out[1], out[0]);
+    printf("%.lfx + %.lf\n\n", out[1], out[0]);
 }
