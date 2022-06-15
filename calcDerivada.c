@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int solicitar_grau();
-double deriva(double poli[ ], int grau, double out[ ]);
+void deriva(double poli[ ], int grau, double out[ ]);
 
 int main (void) {
     printf("\nCalculadora de Derivada");
@@ -21,7 +21,7 @@ int solicitar_grau() {
     return grau;
 }
 
-double deriva(double poli[ ], int grau, double out[grau-1]) {
+void deriva(double poli[ ], int grau, double out[grau-1]) {
     int i = grau;
     printf("\nAgora voce ira digitar seus %d coeficientes (c), ordem da direita para a esquerda (<--).", grau+1);
     printf("\nExemplo: p(x) = ");
@@ -65,5 +65,4 @@ double deriva(double poli[ ], int grau, double out[grau-1]) {
         printf("%.lfx^%d + ", out[i], i);
     }
     printf("%.lfx + %.lf + 0\n\n", out[1], out[0]);
-    return out[grau];
 }
